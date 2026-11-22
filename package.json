@@ -1,0 +1,12 @@
+{
+  "name": "brani-ncs-2016-2017",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "@discordjs/voice": "^0.18.0",
+    "@snazzah/davey": "^0.1.0",
+    "ffmpeg-static": "^5.2.0",
+    "opusscript": "^0.1.1"
+  }
+}
