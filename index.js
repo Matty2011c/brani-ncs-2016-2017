@@ -2,6 +2,7 @@ const { Client, GatewayIntentBits } = require('discord.js');
 const { joinVoiceChannel, createAudioPlayer, createAudioResource, AudioPlayerStatus, NoSubscriberBehavior } = require('@discordjs/voice');
 const fs = require('fs');
 const path = require('path');
+const http = require('http');
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildVoiceStates] });
 
@@ -29,7 +30,10 @@ client.once('ready', () => {
   };
 
   player.on(AudioPlayerStatus.Idle, playNext);
+  player.on('error', err => console.error(err));
   playNext();
 });
 
 client.login(process.env.TOKEN);
+
+http.createServer((req, res) => res.end('OK')).listen(process.env.PORT || 3000);
