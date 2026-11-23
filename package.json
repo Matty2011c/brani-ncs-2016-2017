@@ -4,8 +4,9 @@
   "main": "index.js",
   "dependencies": {
     "discord.js": "^14.16.3",
-    "@discordjs/voice": "^0.18.0",
-    "@snazzah/davey": "^0.1.0",
+    "@discordjs/voice": "latest",
+    "@snazzah/davey": "latest",
+    "@noble/ciphers": "latest",
     "ffmpeg-static": "^5.2.0",
     "opusscript": "^0.1.1"
   }
